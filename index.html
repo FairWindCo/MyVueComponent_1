@@ -55,12 +55,16 @@
                     minimal_alarm_value="20"
                     size="300"
           ></steelvue>
+        <ledvue v-bind:active="temp > 20"></ledvue>
+        <lcdvue v-bind:value="temp" unit="% h" header="Homidity" detail="before = "></lcdvue>
+        <liniarvue v-bind:value="temp" unit="% h" title="Homidity"></liniarvue>
 					<button class="btn" v-on:click="randomize" >RND</button>
 			</div>
 
 		<script src="https://unpkg.com/vue@next"></script>
-		<script src="./js/tween-min.js" ></script>
-		<script src="./js/steelseries-min.js" ></script>
+<!--		<script src="./js/tween-min.js" ></script>-->
+<!--		<script src="./js/steelseries-min.js" ></script>-->
+    <script src="./js/steelseries.js" ></script>
 		<script type="module" src="./js/app.js" ></script>
 
 	</body>

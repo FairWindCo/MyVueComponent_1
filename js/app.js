@@ -1,4 +1,4 @@
-import SteelSeriesControl from "./vue_steelseries.js";
+import {RadialControl, LedControl, DisplayMultiControl, LiniarControl} from "./vue_steelseries.js";
 
 const App = {
 	data() {
@@ -59,5 +59,10 @@ const App = {
 }
 
 let app = Vue.createApp(App);
-app.component('steelvue', SteelSeriesControl);
+app.component('steelvue', RadialControl);
+app.component('ledvue', LedControl);
+app.component('lcdvue', DisplayMultiControl);
+app.component('liniarvue', LiniarControl);
+
+
 app.mount('#page-wrapper');
